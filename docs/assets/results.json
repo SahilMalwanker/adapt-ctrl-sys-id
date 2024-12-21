@@ -1,0 +1,249 @@
+{
+  "servo": {
+    "static_map": {
+      "K_linear_rad_s_per_V": 24.5646,
+      "K0_low_speed_rad_s_per_V": 28.6252,
+      "beta_V_s2_per_rad2": 3.249e-05,
+      "rms_error_linear_rad_s": 4.087,
+      "rms_error_quadratic_rad_s": 1.879
+    },
+    "identification": {
+      "hardware_K": 25.172,
+      "hardware_T": 0.31919,
+      "virtual_arx_K": 25.5081,
+      "virtual_arx_T": 0.3259,
+      "virtual_oe_K": 25.4909,
+      "virtual_oe_T": 0.3193,
+      "fit_oe_pct": 96.94,
+      "fit_arx_pct": 96.89,
+      "fit_hardware_model_pct": 96.65,
+      "rls_final_K": 25.5081,
+      "rls_final_T": 0.3259
+    },
+    "frequency_validation": {
+      "omega_rad_s": [
+        1.0339,
+        3.1329,
+        9.3988
+      ],
+      "hardware_db": [
+        28.79,
+        26.43,
+        20.17
+      ],
+      "linear_pt1_db": [
+        27.57,
+        25.01,
+        18.02
+      ],
+      "calibrated_virtual_db": [
+        28.43,
+        25.61,
+        18.33
+      ],
+      "mean_abs_error_linear_db": 1.6,
+      "mean_abs_error_calibrated_db": 1.01
+    },
+    "cascade": {
+      "s_vel_actuator_limit": -31.688,
+      "s_vel_rule_of_thumb": -31.0,
+      "s_vel_design": -30.103,
+      "Kd": 0.342,
+      "Kp": 16.8,
+      "poles": [
+        "(-15.05+15.05j)",
+        "(-15.05-15.05j)"
+      ],
+      "step_overshoot_pct": 2.34,
+      "step_peak_voltage": 9.03
+    },
+    "adaptive": {
+      "fixed_overshoot_pct": 13.672,
+      "fixed_iae_after_change": 1.118,
+      "adaptive_overshoot_pct": 3.776,
+      "adaptive_iae_after_change": 1.061,
+      "inertia_ratio": 1.851,
+      "t_switch_s": 4.9
+    }
+  },
+  "pendulum": {
+    "geometry": {
+      "l_up_m": 0.1875,
+      "l_down_m": 0.319,
+      "J_up_kgm2": 0.04761,
+      "J_down_kgm2": 0.09383,
+      "a0_up_Nm": 1.5024
+    },
+    "free_fall": {
+      "J_energy_bound": 0.05815,
+      "J_geometry": 0.04761,
+      "J_fit_viscous": 0.05375,
+      "J_fit_drag": 0.05372,
+      "d_envelope": 0.00384,
+      "d_fit_viscous": 0.00448,
+      "d_fit_drag": 0.00211,
+      "c_fit_drag": 0.00051,
+      "fit_lab_pct": -16.2,
+      "fit_viscous_pct": 84.7,
+      "fit_drag_pct": 93.0,
+      "gyro_drift_deg_per_s": 0.7667,
+      "imu_scale_vs_potentiometer": 0.966,
+      "imu_bias_deg_per_s": 0.731,
+      "imu_correlation": 0.9912
+    },
+    "statics": {
+      "thrust_gain_N_per_pct": 0.05259,
+      "b0_Nm_per_pct": 0.0263,
+      "com_geometry_m": 0.1875,
+      "com_two_position_m": 0.2531,
+      "com_two_position_band_m": [
+        0.2072,
+        0.3174
+      ]
+    },
+    "step_response": {
+      "phi_start_deg": 22.25,
+      "phi_end_deg": 42.39,
+      "u_start_pct": 21.63,
+      "u_end_pct": 38.52,
+      "overshoot_pct": 100.0,
+      "fit_lab_pct": -9.9,
+      "fit_without_thrust_damping_pct": -37.3,
+      "fit_calibrated_pct": 62.4,
+      "thrust_damping": 0.000763,
+      "rotor_tau_s": 0.0444,
+      "arx2_fit_pct": 59.4,
+      "arx2_wn_rad_s": 4.538,
+      "arx2_zeta": 0.1262,
+      "arx2_dc_gain_deg_per_pct": 1.2471,
+      "arx2_physical": {
+        "J": 0.05372,
+        "a1": 0.06154,
+        "a0_lin": 1.10611,
+        "b0_Nm_per_pct": 0.02408,
+        "model_a0_lin": 1.10956,
+        "model_b0_Nm_per_pct": 0.0263
+      }
+    },
+    "linearisation": {
+      "max_error_deg_steps_up_to_2deg": 0.71,
+      "error_deg_at_operating_point": {
+        "+-1": 0.102,
+        "+-2": 0.411,
+        "+-3": 0.933,
+        "+-5": 2.676,
+        "+-7.5": 6.284,
+        "+-10": 11.591,
+        "+-12.5": 18.603,
+        "+-15": 28.077,
+        "+-20": 72.633
+      },
+      "cells_evaluated": 108,
+      "cells_passing_horizontal": 12
+    },
+    "calibrated_model": {
+      "J": 0.05372,
+      "viscous": 0.002110064992395071,
+      "drag": 0.0005096048423367716,
+      "thrust_damping": 0.0007633550724130284,
+      "thrust_gain": 0.05259266100084406,
+      "rotor_tau": 0.04443061102074097,
+      "deadband_pct": 6.0
+    },
+    "gyro_chair": {
+      "net_turns": -3.433,
+      "travelled_turns": 6.526,
+      "reversals": 1
+    }
+  },
+  "control": {
+    "design": {
+      "operating_point_deg": 40.0,
+      "omega_rad_s": 8.0,
+      "zeta": 0.9,
+      "alpha": 1.0,
+      "Kp": 5.6242,
+      "Ki": 18.2513,
+      "Kd": 0.7786,
+      "q0_PI": 7.4581,
+      "q1_PI": -7.2237,
+      "q0_P": 0.7786,
+      "Ts_s": 0.01,
+      "poles": [
+        "(-8+0j)",
+        "(-7.2+3.49j)",
+        "(-7.2-3.49j)"
+      ]
+    },
+    "model_runs": {
+      "pip": {
+        "J_e_deg2": 1.15,
+        "J_u_pct2": 1375.9,
+        "u_peak_pct": 100.0
+      },
+      "pip_ff_aw": {
+        "J_e_deg2": 1.07,
+        "J_u_pct2": 1368.6,
+        "u_peak_pct": 100.0
+      },
+      "pid_1dof": {
+        "J_e_deg2": 1.102,
+        "J_u_pct2": 1378.6,
+        "u_peak_pct": 100.0
+      }
+    },
+    "twin_run": {
+      "J_e_deg2": 1.069,
+      "J_u_pct2": 1369.0
+    },
+    "bandwidth_sweep": {
+      "omega_rad_s": [
+        2.5,
+        3.0,
+        4.0,
+        5.0,
+        6.0,
+        7.0,
+        8.0,
+        10.0,
+        12.0,
+        14.0
+      ],
+      "J_e_deg2_pip": [
+        9.51,
+        4.76,
+        2.16,
+        1.49,
+        1.22,
+        1.1,
+        1.15,
+        1.82,
+        1270000.0,
+        1520000.0
+      ],
+      "J_e_deg2_pip_ff_aw": [
+        3.11,
+        2.53,
+        1.88,
+        1.52,
+        1.27,
+        1.08,
+        1.07,
+        1.1,
+        1.09,
+        1.07
+      ]
+    },
+    "realtime_timing": {
+      "nominal": 0.01,
+      "intervals": 1999.0,
+      "deviations": 738.0,
+      "deviation_share": 0.36918,
+      "mean_interval": 0.01,
+      "std_interval": 0.00128,
+      "p99_interval": 0.0116,
+      "max_interval": 0.031,
+      "duration": 19.9907
+    }
+  }
+}
